@@ -12,6 +12,41 @@ class Hospital:
         self.root.title("Hospital Management System")
         self.root.geometry("1540x800+0+0")
         
+        self.Nameoftablets=StringVar()
+
+        self.ref=StringVar()
+
+        self.Dose=StringVar()
+
+        self.NumberofTablets=StringVar()
+
+        self.Lot=StringVar()
+
+        self.Issuedate=StringVar()
+
+        self.ExpDate=StringVar()
+
+        self.DailyDose=StringVar()
+
+        self.sideEfect=StringVar()
+
+        self.FurtherInformatio=StringVar()
+
+        self.StorageAdvice=StringVar()
+
+        self.DrivingUsingMachine=StringVar()
+
+        self.HowToUseMedication=StringVar()
+
+        self.PatientId=StringVar()
+
+        self.nhsNumber=StringVar()
+
+        self.PatientName=StringVar()
+
+        self.DateOfBirth=StringVar()
+
+        self.PatientAddress=StringVar()
 
         lbltitle=Label(self.root,bd=20,relief=RIDGE,text="HOSPITAL MANAGEMENT SYSTEM",fg="red",bg="white",font=("times new roman",50,"bold"))
         lbltitle.pack(side=TOP, fill=X)
@@ -43,93 +78,93 @@ class Hospital:
         lblNameTablet=Label(DataframeLeft,text="Name Of Tablet", font=("times new roman",12,"bold"),padx=2, pady=6)
         lblNameTablet.grid(row=0,column=0)
 
-        comNametablet=ttk.Combobox(DataframeLeft,font=("times new roman",12,"bold"),width=33)
+        comNametablet=ttk.Combobox(DataframeLeft,textvariable=self.Nameoftablets,font=("times new roman",12,"bold"),width=33)
         comNametablet["values"]=("Nice", "corona Vaccine", "Acetaminophen", "Adderall", "Amlodipine", "Ativan")
         comNametablet.grid(row=0,column=1)
 
         lblref= Label(DataframeLeft,font=("arial",12,"bold"),text="Reference No.:",padx=2)
         lblref.grid(row=1, column=0,sticky=W)
-        txtref=Entry(DataframeLeft,font=("arial",13,"bold"),width=35)
+        txtref=Entry(DataframeLeft,font=("arial",13,"bold"),textvariable=self.ref,width=35)
         txtref.grid(row=1, column=1)
 
         lblDose= Label(DataframeLeft,font=("arial",12,"bold"),text="Dose:",padx=2,pady=4)
         lblDose.grid(row=2, column=0,sticky=W)
-        txtDose=Entry(DataframeLeft,font=("arial",13,"bold"),width=35)
+        txtDose=Entry(DataframeLeft,font=("arial",13,"bold"),textvariable=self.Dose,width=35)
         txtDose.grid(row=2, column=1)
 
         lblNoOftablets= Label(DataframeLeft,font=("arial",12,"bold"),text="No. Of Tablets:",padx=2, pady=6)
         lblNoOftablets.grid(row=3, column=0,sticky=W)
-        txtNoOftablets=Entry(DataframeLeft,font=("arial",13,"bold"),width=35)
+        txtNoOftablets=Entry(DataframeLeft,font=("arial",13,"bold"),textvariable=self.NumberofTablets,width=35)
         txtNoOftablets.grid(row=3, column=1)
 
         lbllot= Label(DataframeLeft,font=("arial",12,"bold"),text="Lot:",padx=2, pady=6)
         lbllot.grid(row=4, column=0,sticky=W)
-        txtlot=Entry(DataframeLeft,font=("arial",13,"bold"),width=35)
+        txtlot=Entry(DataframeLeft,font=("arial",13,"bold"),textvariable=self.Lot,width=35)
         txtlot.grid(row=4, column=1)
 
         lblissuedate= Label(DataframeLeft,font=("arial",12,"bold"),text="Issue Date:",padx=2, pady=6)
         lblissuedate.grid(row=5, column=0,sticky=W)
-        txtissueDate=Entry(DataframeLeft,font=("arial",13,"bold"),width=35)
+        txtissueDate=Entry(DataframeLeft,font=("arial",13,"bold"),textvariable=self.Issuedate,width=35)
         txtissueDate.grid(row=5, column=1)
 
         lblExpDate= Label(DataframeLeft,font=("arial",12,"bold"),text="Exp Date:",padx=2, pady=6)
         lblExpDate.grid(row=6, column=0,sticky=W)
-        txtExpDate=Entry(DataframeLeft,font=("arial",13,"bold"),width=35)
+        txtExpDate=Entry(DataframeLeft,font=("arial",13,"bold"),textvariable=self.ExpDate,width=35)
         txtExpDate.grid(row=6, column=1)
 
         lblDailyDose= Label(DataframeLeft,font=("arial",12,"bold"),text="Daily Dose:",padx=2, pady=4)
         lblDailyDose.grid(row=7, column=0,sticky=W)
-        txtDailyDose=Entry(DataframeLeft,font=("arial",13,"bold"),width=35)
+        txtDailyDose=Entry(DataframeLeft,font=("arial",13,"bold"),textvariable=self.DailyDose,width=35)
         txtDailyDose.grid(row=7, column=1)
 
         lblFurtherinfo= Label(DataframeLeft,font=("arial",12,"bold"),text="Further Information:",padx=2)
         lblFurtherinfo.grid(row=0, column=2,sticky=W)
-        txtFurtherinfo=Entry(DataframeLeft,font=("arial",13,"bold"),width=35)
+        txtFurtherinfo=Entry(DataframeLeft,font=("arial",13,"bold"),textvariable=self.FurtherInformatio,width=35)
         txtFurtherinfo.grid(row=0, column=3)
 
         lblSideEffect= Label(DataframeLeft,font=("arial",12,"bold"),text="Side Effects:",padx=2, pady=6)
         lblSideEffect.grid(row=8, column=0,sticky=W)
-        txtSideEffect=Entry(DataframeLeft,font=("arial",13,"bold"),width=35)
+        txtSideEffect=Entry(DataframeLeft,font=("arial",13,"bold"),textvariable=self.sideEfect,width=35)
         txtSideEffect.grid(row=8, column=1)
 
         lblBloodPressure= Label(DataframeLeft,font=("arial",12,"bold"),text="Blood Pressure:",padx=2, pady=6)
         lblBloodPressure.grid(row=1, column=2,sticky=W)
-        txtBloodPressure=Entry(DataframeLeft,font=("arial",13,"bold"),width=35)
+        txtBloodPressure=Entry(DataframeLeft,font=("arial",13,"bold"),textvariable=self.DrivingUsingMachine,width=35)
         txtBloodPressure.grid(row=1, column=3)
 
         lblStorage= Label(DataframeLeft,font=("arial",12,"bold"),text="Storage Advice:",padx=2, pady=6)
         lblSideEffect.grid(row=2, column=2,sticky=W)
-        txtStorage=Entry(DataframeLeft,font=("arial",13,"bold"),width=35)
+        txtStorage=Entry(DataframeLeft,font=("arial",13,"bold"),textvariable=self.StorageAdvice,width=35)
         txtStorage.grid(row=2, column=3)
 
         lblMedicine= Label(DataframeLeft,font=("arial",12,"bold"),text="Medication:",padx=2, pady=6)
         lblMedicine.grid(row=3, column=2,sticky=W)
-        txtMedicine=Entry(DataframeLeft,font=("arial",13,"bold"),width=35)
+        txtMedicine=Entry(DataframeLeft,font=("arial",13,"bold"),textvariable=self.HowToUseMedication,width=35)
         txtMedicine.grid(row=3, column=3)
 
         lblPatientId= Label(DataframeLeft,font=("arial",12,"bold"),text="Patient ID:",padx=2, pady=6)
         lblPatientId.grid(row=4, column=2,sticky=W)
-        txtPatientId=Entry(DataframeLeft,font=("arial",13,"bold"),width=35)
+        txtPatientId=Entry(DataframeLeft,font=("arial",13,"bold"),textvariable=self.PatientId,width=35)
         txtPatientId.grid(row=4, column=3)
 
         lblNhsNumber= Label(DataframeLeft,font=("arial",12,"bold"),text="NHS Number:",padx=2, pady=6)
         lblNhsNumber.grid(row=5, column=2,sticky=W)
-        txtNhsNumber=Entry(DataframeLeft,font=("arial",13,"bold"),width=35)
+        txtNhsNumber=Entry(DataframeLeft,font=("arial",13,"bold"),textvariable=self.nhsNumber,width=35)
         txtNhsNumber.grid(row=5, column=3)
 
         lblPatientame= Label(DataframeLeft,font=("arial",12,"bold"),text="Patient Name:",padx=2, pady=6)
         lblPatientame.grid(row=6, column=2,sticky=W)
-        txtPatientname=Entry(DataframeLeft,font=("arial",13,"bold"),width=35)
+        txtPatientname=Entry(DataframeLeft,font=("arial",13,"bold"),textvariable=self.PatientName,width=35)
         txtPatientname.grid(row=6, column=3)
 
         lblDateOfBirth= Label(DataframeLeft,font=("arial",12,"bold"),text="Date Of Birth:",padx=2, pady=6)
         lblDateOfBirth.grid(row=7, column=2,sticky=W)
-        txtDateOfBirth=Entry(DataframeLeft,font=("arial",13,"bold"),width=35)
+        txtDateOfBirth=Entry(DataframeLeft,font=("arial",13,"bold"),textvariable=self.DateOfBirth,width=35)
         txtDateOfBirth.grid(row=7, column=3)
 
         lblPatientAddress= Label(DataframeLeft,font=("arial",12,"bold"),text="Patient Address:",padx=2, pady=6)
         lblPatientAddress.grid(row=8, column=2,sticky=W)
-        txtPatientAddress=Entry(DataframeLeft,font=("arial",13,"bold"),width=35)
+        txtPatientAddress=Entry(DataframeLeft,font=("arial",13,"bold"),textvariable=self.PatientAddress,width=35)
         txtPatientAddress.grid(row=8, column=3)
 
 #==============================================Data FrameRight================================================
@@ -217,7 +252,14 @@ class Hospital:
 
         self.hospital_table.pack(fill=BOTH,expand=1)
 
-        
+#=========================================Functionality Declaration=====================================================================
+def iPrescriptionData(self):
+        if self.Nameoftablets.get()=="" or self.ref.get()="":
+                messagebox.showerror("Error", "All fields are required")
+        else:
+                conn=mysql.connector.connect(host="localhost", username="root",password="Test@123", database="Mydata")
+                
+
 
 
 
